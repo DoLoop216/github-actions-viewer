@@ -1,0 +1,64 @@
+{
+  "name": "github-workflows-explorer",
+  "publisher": "LimitlessSoft",
+  "displayName": "Github Workflows Explorer",
+  "description": "Easy way to navigate and organize your workflow files in multiple layers.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "repository": {
+    "url": "https://github.com/DoLoop216/github-workflows-explorer",
+    "directory": "Github",
+    "type": "Github"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "menus": {
+      "view/item/context": [
+        {
+          "command": "github-workflows-viewer.newFile",
+          "when": "view == MainView && viewItem == github-workflows-viewer-item"
+        }
+      ]
+    },
+    "commands": [{
+      "command": "github-workflows-viewer.newFile",
+      "title": "New File"
+    }],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "github-workflow-viewer-sidebar",
+          "title": "Github Workflow Viewer",
+          "icon": "assets/github-workflows-viewer.png"
+        }
+      ]
+    },
+    "views": {
+      "github-workflow-viewer-sidebar": [
+        {
+          "id": "MainView",
+          "name": "Workflow Browser"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.102.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "eslint": "^9.25.1",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
