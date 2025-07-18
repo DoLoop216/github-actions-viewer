@@ -1,6 +1,8 @@
-# github-actions-viewer
+# github-actions-explorer
 This should be plugin supported by multiple IDEs like JetBrain IDEs, VS and VS Code, supporting separate view for workflow files.
 Since GitHub is too lazy to make feature of organizing files within multi layered directory, this plugin should mimick sub-folder structure using file names.
+
+Name your files with some underscores (_) like `first-folder_sub-folder_my-file.yml` and see magic
 
 General idea is having files named as:
  - crons_danas-update_build.yml
