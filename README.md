@@ -4,6 +4,10 @@ Since GitHub is too lazy to make feature of organizing files within multi layere
 
 Name your files with some underscores (_) like `first-folder_sub-folder_my-file.yml` and see magic
 
+<img width="650" height="531" alt="image" src="https://github.com/user-attachments/assets/f77522d3-21dc-44af-9cc8-d09a90f9e1a4" />
+<img width="1187" height="504" alt="image" src="https://github.com/user-attachments/assets/d82a50e5-2c8d-42fa-9d1a-1b6b640811f2" />
+
+
 General idea is having files named as:
  - crons_danas-update_build.yml
  - crons_danas-update_release.yml
