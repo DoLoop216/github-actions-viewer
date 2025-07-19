@@ -1,4 +1,5 @@
 const vscode = require('vscode');
+const { checkAndCreateWorkflows } = require(`../helpers/globalHelpers`)
 
 const directorySplitter = '_';
 const isDirectory = (path) => path.includes(directorySplitter);
@@ -69,6 +70,7 @@ class MainViewTreeProvider {
     if (!workspaceFolder) return [ new vscode.TreeItem('No workflow files within repository')];
 
     const workflowsUri = vscode.Uri.joinPath(workspaceFolder.uri, '.github', 'workflows');
+    await checkAndCreateWorkflows(workflowsUri.path)
     try {
         const entries = await vscode.workspace.fs.readDirectory(workflowsUri);
         const files = entries?.filter(([name, type]) => type === vscode.FileType.File).map(([name]) => name);
