@@ -2,6 +2,7 @@ const vscode = require('vscode')
 
 const { DIRECTORY_SEPARATOR } = require('../constants/generalConstants')
 const { COULD_NOT_PARSE_SINGLE_FILE_BECAUSE_NAMING } = require('../constants/messagesConstants')
+const { EXPLORER_TREE_ITEM_CONTEXT_VALUE_FILE } = require('../constants/generalConstants')
 
 const isDirectory = (path) => path.includes(DIRECTORY_SEPARATOR);
 const extractDirectory = (path) => path.split(DIRECTORY_SEPARATOR)[0];
@@ -29,7 +30,10 @@ const extractChildren = (paths, dirPath) => {
         children.push(new ExplorerTreeItem(dir, ps, dirPath + dir + DIRECTORY_SEPARATOR));
     }
     for (const file of files.sort()) {
-        children.push(new vscode.TreeItem(file, vscode.TreeItemCollapsibleState.None));
+        const node = new vscode.TreeItem(file, vscode.TreeItemCollapsibleState.None)
+        node.contextValue = EXPLORER_TREE_ITEM_CONTEXT_VALUE_FILE
+        node.filePath = dirPath + file;
+        children.push(node);
     }
     return children;
 };
