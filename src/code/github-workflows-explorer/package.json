@@ -18,7 +18,8 @@
     "Other",
     "Visualization"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onView:MainView"],
   "icon": "assets/github-workflows-explorer-with-background.png",
   "main": "./extension.js",
   "contributes": {
