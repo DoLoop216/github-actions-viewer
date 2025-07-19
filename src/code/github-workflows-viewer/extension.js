@@ -8,13 +8,7 @@ var treeProvider;
 async function activate(context) {
 	treeProvider = new MainViewTreeProvider(context)
 	vscode.window.registerTreeDataProvider('MainView', treeProvider)
-	// const disposable = vscode.commands.registerCommand('github-workflows-viewer.helloWorld', function () {
-	// 	vscode.window.showInformationMessage('Hello World from github-workflows-viewer!');
-	// });
-
-	vscode.commands.registerCommand('github-workflows-viewer.newFile', promptForFileName)
-
-	// context.subscriptions.push(disposable);
+	vscode.commands.registerCommand('github-workflows-explorer.newFile', promptForFileName)
 }
 
 async function deactivate() {}
