@@ -1,6 +1,6 @@
 # 🧭 GitHub Actions Explorer
 
-A cross-platform IDE plugin designed to streamline your GitHub workflow files. Supports JetBrains IDEs (IntelliJ, WebStorm, etc.), Visual Studio, and VS Code.
+A cross-platform IDE plugin designed to streamline your GitHub workflow files. Supports [VS Code](https://marketplace.visualstudio.com/items?itemName=LimitlessSoft.github-workflows-explorer), JetBrains IDEs (To be implemented) and Visual Studio (To be implemented).
 
 GitHub doesn't natively support organizing workflow files into nested folders, so everything ends up in `.github/workflows`. This plugin introduces a clever workaround: it mimics folder hierarchies using underscores (`_`) in filenames, giving your workflows the organized structure they deserve.
 
