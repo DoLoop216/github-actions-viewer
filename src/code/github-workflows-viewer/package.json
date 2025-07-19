@@ -3,7 +3,7 @@
   "publisher": "LimitlessSoft",
   "displayName": "Github Workflows Explorer",
   "description": "Easy way to navigate and organize your workflow files in multiple layers.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.102.0"
   },
