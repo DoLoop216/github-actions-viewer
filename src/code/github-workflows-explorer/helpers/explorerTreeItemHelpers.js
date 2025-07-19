@@ -33,6 +33,7 @@ const extractChildren = (paths, dirPath) => {
         const node = new vscode.TreeItem(file, vscode.TreeItemCollapsibleState.None)
         node.contextValue = EXPLORER_TREE_ITEM_CONTEXT_VALUE_FILE
         node.filePath = dirPath + file;
+        node.id = dirPath + file;
         children.push(node);
     }
     return children;
