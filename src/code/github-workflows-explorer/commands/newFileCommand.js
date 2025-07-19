@@ -1,21 +1,7 @@
-const { MainViewTreeProvider } = require('./views/mainView');
-
-const vscode = require('vscode');
-var treeProvider;
-/**
- * @param {vscode.ExtensionContext} context
- */
-async function activate(context) {
-	treeProvider = new MainViewTreeProvider(context)
-	vscode.window.registerTreeDataProvider('MainView', treeProvider)
-	vscode.commands.registerCommand('github-workflows-explorer.newFile', promptForFileName)
-}
-
-async function deactivate() {}
-
 const path = require('path');
+const vscode = require('vscode');
 
-async function promptForFileName(item) {
+async function newFileCommand(treeProvider, item) {
   const fileName = await vscode.window.showInputBox({
     title: 'Create New Workflow File within .github/workflows' + item.dirPath,
     prompt: 'Enter the name of the new workflow file (e.g. myFile.yml)',
@@ -48,8 +34,6 @@ async function promptForFileName(item) {
   }
 }
 
-
 module.exports = {
-	activate,
-	deactivate
+    newFileCommand
 }
