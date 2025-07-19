@@ -2,8 +2,8 @@
   "name": "github-workflows-explorer",
   "publisher": "LimitlessSoft",
   "displayName": "Github Workflows Explorer",
-  "description": "Easy way to navigate and organize your workflow files in multiple layers.",
-  "version": "0.0.2",
+  "description": "A cross-platform IDE plugin designed to streamline your GitHub workflow files.",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.102.0"
   },
@@ -21,26 +21,26 @@
     "menus": {
       "view/item/context": [
         {
-          "command": "github-workflows-viewer.newFile",
-          "when": "view == MainView && viewItem == github-workflows-viewer-item"
+          "command": "github-workflows-explorer.newFile",
+          "when": "view == MainView && viewItem == github-workflows-explorer-item"
         }
       ]
     },
     "commands": [{
-      "command": "github-workflows-viewer.newFile",
+      "command": "github-workflows-explorer.newFile",
       "title": "New File"
     }],
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "github-workflow-viewer-sidebar",
-          "title": "Github Workflow Viewer",
-          "icon": "assets/github-workflows-viewer.png"
+          "id": "github-workflow-explorer-sidebar",
+          "title": "Github Workflow Explorer",
+          "icon": "assets/github-workflows-explorer.png"
         }
       ]
     },
     "views": {
-      "github-workflow-viewer-sidebar": [
+      "github-workflow-explorer-sidebar": [
         {
           "id": "MainView",
           "name": "Workflow Browser"
@@ -49,9 +49,7 @@
     }
   },
   "scripts": {
-    "lint": "eslint .",
-    "pretest": "npm run lint",
-    "test": "vscode-test"
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@types/vscode": "^1.102.0",
