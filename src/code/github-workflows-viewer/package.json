@@ -27,13 +27,23 @@
         {
           "command": "github-workflows-explorer.newFile",
           "when": "view == MainView && viewItem == github-workflows-explorer-item"
+        },
+        {
+          "command": "github-workflows-explorer.deleteFile",
+          "when": "view == MainView && viewItem == github-workflows-explorer-item-file"
         }
       ]
     },
-    "commands": [{
-      "command": "github-workflows-explorer.newFile",
-      "title": "New File"
-    }],
+    "commands": [
+      {
+        "command": "github-workflows-explorer.newFile",
+        "title": "New File"
+      },
+      {
+        "command": "github-workflows-explorer.deleteFile",
+        "title": "Delete File"
+      }
+    ],
     "viewsContainers": {
       "activitybar": [
         {
