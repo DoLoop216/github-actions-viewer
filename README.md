@@ -64,4 +64,9 @@ Screenshots of the plugin view:
 ![Example View 1](https://github.com/user-attachments/assets/f77522d3-21dc-44af-9cc8-d09a90f9e1a4)
 ![Example View 2](https://github.com/user-attachments/assets/d82a50e5-2c8d-42fa-9d1a-1b6b640811f2)
 
-Future plans: support for customizable separators, drag-and-drop folder simulation, and integration with GitHub API for metadata enrichment.
+# Features
+ - New File
+ - Delete File
+ - Rename File
+ - Drag & Drop file from directory to directory
+ - Create Directory (this actually is not feature. Use `Rename File` and syntax with `_` to make it as directory)
