@@ -3,7 +3,7 @@
   "publisher": "LimitlessSoft",
   "displayName": "Github Workflows Explorer",
   "description": "A cross-platform IDE plugin designed to streamline your GitHub workflow files.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "keywords": ["Workflows", "GitHub", "Explorer"],
   "license": "MIT",
   "engines": {
